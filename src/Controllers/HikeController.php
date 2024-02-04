@@ -7,7 +7,7 @@ use MVC\Models\Hike;
 
 class HikeController extends Controller {
     public function index() {
-        $users = [
+        $hikes = [
             new Hike('John Doe', 'john@example.com'),
             new Hike('Jane Doe', 'jane@example.com')
         ];

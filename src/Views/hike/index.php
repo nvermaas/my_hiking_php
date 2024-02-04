@@ -8,7 +8,7 @@
     <h1>Hike List</h1>
     <ul>
         <?php foreach ($hikes as $hike): ?>
-            <li><?= $hike->name ?> (<?= $hike->place ?>)</li>
+            <li><?= $hike->title ?> (<?= $hike->place ?>)</li>
         <?php endforeach; ?>
     </ul>
 </body>
