@@ -1,10 +1,10 @@
 <?php
 
 use MVC\Router;
-use MVC\Controllers\HikeController;
+use MVC\Controllers\Hikes;
 
 $router = new Router();
 
-$router->addRoute('/', HikeController::class, 'index');
-$router->addRoute('/my_hiking/', HikeController::class, 'index');
+$router->addRoute('/', Hikes::class, 'index');
+$router->addRoute('/my_hiking/', Hikes::class, 'index');
 return $router;
