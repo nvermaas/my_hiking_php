@@ -27,7 +27,7 @@
        <table>
          <tr>
            <td>
-                <form action="" method="post">
+                <form action="filtered.php" method="post">
                     <input type="hidden" name="country" value="France">
                     <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> France</button>
                 </form>

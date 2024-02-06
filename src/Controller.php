@@ -1,6 +1,7 @@
 <?php
 
 namespace MVC;
+use MVC\Models\Hike;
 
 class Controller {
     protected function render($view, $data = []) {
@@ -8,4 +9,6 @@ class Controller {
 
         include "Views/$view.php";
     }
+
+
 }

@@ -5,6 +5,7 @@ use MVC\Controllers\Hikes;
 
 $router = new Router();
 
-$router->addRoute('/', Hikes::class, 'index');
 $router->addRoute('/my_hiking/', Hikes::class, 'index');
+$router->addRoute('/my_hiking/filtered/', Hikes::class, 'filter');
+
 return $router;
