@@ -11,26 +11,13 @@ class Hikes extends Controller {
         $country="ALL";
         $hike = new Hike();
         $data = $hike->getHikesByCountry($country);
-
+        echo "<script>alert('$country');</script>";
         $this->render('hike/index', ['data' => $data]);
-    }
 
-    public function filter() {
-        $country="Sweden";
-        $hike = new Hike();
-        $data = $hike->getHikesByCountry($country);
-
-        $this->render('hike/filtered', ['data' => $data]);
-    }
-
-    public function showHikesPerCountry($country) {
-        $hike = new Hike();
-        $data = $hike->getHikesByCountry($country);
-
-        $this->render('hike/index', ['data' => $data]);
     }
 
     public function filterAction() {
+        echo "<script>alert('filterAction');</script>";
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['filter'])) {
 
             // Handle form submission

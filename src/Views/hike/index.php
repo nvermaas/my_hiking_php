@@ -37,55 +37,31 @@ $debugbar["messages"]->addMessage("hello world!");
         <div class="row">
 
             <?php
-                while ($row = $data->fetchArray(SQLITE3_ASSOC)){
+                while ($row = $data->fetchArray(SQLITE3_ASSOC)) {
                    $imagePath = $row['hike_image_url'];
                    $imageId = $row['title'];
 
-                    // Use Bootstrap card component to display each image
-                    echo '
+                echo '
                     <div class="col-sm-6 col-lg-4">
-
                         <div class="thumbnail">
                            <img class="img-rounded" src="' . $imagePath . '" class="card-img-top" alt="Image ' . $imageId . '">
                         </div>
+
                         <div class="caption">
                             <h4 class="card-title">' . $row['title'] . ' ' . $row['year'] . ' - <small>' . $row['place'] . '</small></h4>
 
-                                <td>
-                                    <a href="" class="btn btn-primary btn-sm" role="button"><i class="fas fa-list"></i> Hike Details</a>
-                                    &nbsp;&nbsp;
-                                </td>
+                            <td>
+                                <form action="hike/' . $row['id'] . '" method="post">
+                                  <input type="hidden" name="id" value="' . $row['id'] . '">
+                                  <button class="btn btn-primary btn-sm" type="submit" name="details"><i class="fas fa-list"></i> Hike Details</button>
+                                </form>
 
-                                <td>
-                                    if $hike->link_to_gallery {
-                                       <a href=$hike->link_to_gallery class="btn btn-success btn-sm" role="button" target="_blank"><i class="fas fa-images"></i> Gallery</a>&nbsp;
-                                    }
-                                </td>
-                                <td>
-                                    if hike.link_to_movie {
-                                       <a href="{{ hike.link_to_movie }}" class="btn btn-success btn-sm" role="button" target="_blank"><i class="fas fa-film"></i> Movie</a>&nbsp;
-                                    }
-                                </td>
-                                <td>
-                                    if hike.link_to_map {
-                                       <a href="{{ hike.link_to_map }}" class="btn btn-success btn-sm" role="button" target="_blank"><i class="fas fa-map"></i> Map</a>&nbsp;
-                                    }
-                                </td>
-                                <td>
-                                    {% if hike.link_to_report %}
-                                       <a href="{{ hike.link_to_report }}" class="btn btn-success btn-sm" role="button" target="_blank"><i class="fas fa-file-alt"></i> Report</a>&nbsp;
-                                    {% endif %}
-                                </td>
-                                <td>
-                                    {% if hike.link_to_gps %}
-                                       <a href="{{ hike.link_to_gps }}" class="btn btn-success btn-sm" role="button" target="_blank"><i class="fas fa-map-marked-alt"></i> GPS</a>&nbsp;
-                                    {% endif %}
-                                </td>
+                              &nbsp;&nbsp;
+                            </td>
                         </div>
-
-                    </div>';
-
-                }
+                    </div>
+                ';
+               }
             ?>
          </div>
     </div>
