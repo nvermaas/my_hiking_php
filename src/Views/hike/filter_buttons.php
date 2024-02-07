@@ -1,33 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway' type='text/css'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="mystyle.css"/>
-    <link rel="icon" href="favicon.png">
-
-    <title>Hiking Nico</title>
-</head>
-<body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-
-            <!-- Header -->
-            <div class="navbar-header">
-                <a class="navbar-brand"> <i class="fas fa-hiking"></i>&nbsp; My Hiking Trips</a>
-            </div>
-    </nav>
-
     <div class="card">
      <div class="card-body">
        <table>
          <tr>
            <td>
-                <form action="filtered.php" method="post">
+                <form action="" method="post">
                     <input type="hidden" name="country" value="France">
                     <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> France</button>
                 </form>
@@ -52,32 +28,3 @@
        </table>
      </div>
     </div>
-
-    <div class="hiking-container container-fluid">
-        <div class="row">
-            <?php
-                while ($row = $data->fetchArray(SQLITE3_ASSOC)){
-                   $imagePath = $row['hike_image_url'];
-                   $imageId = $row['title'];
-
-                    // Use Bootstrap card component to display each image
-                    echo '
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card">
-                            <div class="thumbnail">
-                               <img class="img-rounded" src="' . $imagePath . '" class="card-img-top" alt="Image ' . $imageId . '">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">' . $row['title'] . ' ' . $row['year'] . ' - <small>' . $row['place'] . '</small></h5>
-                            </div>
-                        </div>
-                    </div>';
-
-                }
-            ?>
-         </div>
-    </div>
-<p class="footer"> version 4 feb 2024</p>
-
-</body>
-</html>
