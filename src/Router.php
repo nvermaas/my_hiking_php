@@ -9,7 +9,10 @@ class Router {
         $this->routes[$route] = ['controller' => $controller, 'action' => $action];
     }
 
-    public function dispatch($uri) {
+    public function dispatch0($uri) {
+        echo "<script>alert('$uri');</script>";
+        // split $uri
+
         if (array_key_exists($uri, $this->routes)) {
             $controller = $this->routes[$uri]['controller'];
             $action = $this->routes[$uri]['action'];
@@ -20,4 +23,35 @@ class Router {
             throw new \Exception("No route found for URI: $uri");
         }
     }
+
+    public function dispatch($uri) {
+        // Iterate through routes and check for matches
+        foreach ($this->routes as $route => $info) {
+            // Escape special characters in route pattern and replace dynamic parts with regex
+            $pattern = preg_replace('/\//', '\/', $route);
+            $pattern = preg_replace('/\{([^}]+)\}/', '(?P<\1>[^\/]+)', $pattern);
+            $pattern = '/^' . $pattern . '$/';
+
+            // Check if the URI matches the pattern
+            if (preg_match($pattern, $uri, $matches)) {
+                // Extract controller and action
+                $controller = $info['controller'];
+                $action = $info['action'];
+
+                // Remove the full match from the matches array
+                array_shift($matches);
+
+                // Call the controller action with matched parameters
+                $controllerInstance = new $controller();
+                call_user_func_array([$controllerInstance, $action], $matches);
+
+                // Exit the dispatch loop after successful match
+                return;
+            }
+        }
+
+        // If no route matches, throw an exception
+        throw new \Exception("No route found for URI: $uri");
+    }
+
 }
