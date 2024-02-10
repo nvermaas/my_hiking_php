@@ -8,7 +8,7 @@ WORKDIR /var/www/html
 # Install PHP extensions and other dependencies
 RUN apt-get update && \
     apt-get install -y libpng-dev && \
-    docker-php-ext-install pdo pdo_mysql gd \
+    docker-php-ext-install pdo pdo_mysql gd && \
     # Install Composer
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
