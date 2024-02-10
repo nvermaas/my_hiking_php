@@ -1,6 +1,15 @@
 # Use an official PHP runtime as a parent image
 FROM php:8.1-apache
 
+# Add missing GPG keys
+RUN apt-get update && \
+    apt-get install -y gnupg && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E98404D386FA1D9 && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6ED0E7B82643E131 && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F8D2585B8783D481 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* \
+
 # Set the working directory in the container
 WORKDIR /var/www/html
 
