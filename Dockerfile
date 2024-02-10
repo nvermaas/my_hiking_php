@@ -12,7 +12,6 @@ RUN apt-get update && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F8D2585B8783D481 && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 54404762BBB6E853 && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BDE6D2B9216EC7A8 && \
-
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -22,7 +21,7 @@ RUN apt-get update && \
     apt-get install -y libpng-dev && \
     docker-php-ext-install pdo pdo_mysql gd && \
     # Install Composer
-    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    # php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     #&& php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
     #php -r "unlink('composer-setup.php');"
 
