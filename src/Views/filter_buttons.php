@@ -3,11 +3,12 @@
        <table>
          <tr>
            <td>
+           <!--
                 <form action="" method="post">
                     <input type="hidden" name="country" value="France">
                     <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> France</button>
                 </form>
-
+           -->
                <a href="{% url 'hiking:hike-set-filter' 'all' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> ALL</a>
                <a href="{% url 'hiking:hike-set-filter' 'austria' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> Austria</a>
                <a href="{% url 'hiking:hike-set-filter' 'canada' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> Canada</a>

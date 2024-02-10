@@ -19,7 +19,10 @@
         <div class="container-fluid">
 
             <!-- Header -->
+
             <div class="navbar-header">
-                <a class="navbar-brand"> <i class="fas fa-hiking"></i>&nbsp; My Hiking Trips</a>
+             <a href="" target="_blank"></a>
+                <a class="navbar-brand" href="/my_hiking"> <i class="fas fa-hiking"></i>&nbsp; My Hiking Trips</a>
             </div>
+
     </nav>
