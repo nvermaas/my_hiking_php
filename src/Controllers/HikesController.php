@@ -5,15 +5,14 @@ namespace MVC\Controllers;
 use MVC\Controller;
 use MVC\Models\Hike;
 
-class Hikes extends Controller {
+class HikesController extends Controller {
 
     public function index() {
         $country="ALL";
         $hike = new Hike();
         $data = $hike->getHikesByCountry($country);
-        echo "<script>alert('$country');</script>";
-        $this->render('hike/index', ['data' => $data]);
-
+        //echo "<script>alert('$country');</script>";
+        $this->render('Hikes', ['data' => $data]);
     }
 
     public function filterAction() {

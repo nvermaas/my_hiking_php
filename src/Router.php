@@ -9,21 +9,6 @@ class Router {
         $this->routes[$route] = ['controller' => $controller, 'action' => $action];
     }
 
-    public function dispatch0($uri) {
-        echo "<script>alert('$uri');</script>";
-        // split $uri
-
-        if (array_key_exists($uri, $this->routes)) {
-            $controller = $this->routes[$uri]['controller'];
-            $action = $this->routes[$uri]['action'];
-
-            $controller = new $controller();
-            $controller->$action();
-        } else {
-            throw new \Exception("No route found for URI: $uri");
-        }
-    }
-
     public function dispatch($uri) {
         // Iterate through routes and check for matches
         foreach ($this->routes as $route => $info) {
