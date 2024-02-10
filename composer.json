@@ -1,0 +1,19 @@
+{
+    "name": "vermaas/my_hiking",
+    "description": "My hiking application in PHP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nico Vermaas",
+            "email": "nvermaas@xs4all.nl"
+        }
+    ],
+  "require": {
+    "maximebf/debugbar": "1.*"
+  }
+}

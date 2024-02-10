@@ -4,6 +4,9 @@ FROM php:7.4-apache
 # Set the working directory in the container
 WORKDIR /var/www/html
 
+COPY composer.json composer.lock ./
+RUN composer install --no-scripts --no-autoloader
+
 # Copy your PHP application code into the container
 COPY . .
 
