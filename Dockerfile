@@ -1,9 +1,8 @@
 # Use an official PHP runtime as a parent image
-FROM php:8.2-apache
+FROM php:8.0-apache
 
 # Set the working directory in the container
 WORKDIR /var/www/html
-
 
 # Install PHP extensions and other dependencies
 RUN apt-get update && \
