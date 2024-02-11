@@ -16,6 +16,11 @@ class HikesController extends Controller {
     }
 
     public function country($country) {
+        //echo "<script>alert('[$country]');</script>";
+
+        // handle New Zealand ;-)
+        $country = str_replace('-', ' ', $country);
+
         $hike = new Hike();
         $data = $hike->getHikesByCountry($country);
         //echo "<script>alert('$country');</script>";
