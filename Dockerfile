@@ -1,6 +1,8 @@
 # Use an official PHP 8.1 Apache image as a base
 FROM php:7.4.30-apache
 
+RUN a2enmod rewrite
+
 # Set the working directory in the container
 WORKDIR /var/www/html
 

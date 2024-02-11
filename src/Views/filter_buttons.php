@@ -3,27 +3,50 @@
        <table>
          <tr>
            <td>
-           <!--
-                <form action="" method="post">
-                    <input type="hidden" name="country" value="France">
+                <form action="/my_hiking" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> ALL</button>
+                </form>
+                <form action="country/Austria" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> Austria</button>
+                </form>
+                <form action="country/Canada" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> Canada</button>
+                </form>
+                <form action="country/Finland" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> Finland</button>
+                </form>
+                <form action="country/France" method="post">
                     <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> France</button>
                 </form>
-           -->
-               <a href="{% url 'hiking:hike-set-filter' 'all' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> ALL</a>
-               <a href="{% url 'hiking:hike-set-filter' 'austria' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> Austria</a>
-               <a href="{% url 'hiking:hike-set-filter' 'canada' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> Canada</a>
-               <a href="{% url 'hiking:hike-set-filter' 'finland' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> Finland</a>
-               <a href="{% url 'hiking:hike-set-filter' 'france' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> France</a>
-               <a href="{% url 'hiking:hike-set-filter' 'italy' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> Italy</a>
-               <a href="{% url 'hiking:hike-set-filter' 'new zealand' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> New Zealand</a>
-               <a href="{% url 'hiking:hike-set-filter' 'norway' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> Norway</a>
-               <a href="{% url 'hiking:hike-set-filter' 'peru' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> Peru</a>
-               <a href="{% url 'hiking:hike-set-filter' 'spain' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> Spain</a>
-               <a href="{% url 'hiking:hike-set-filter' 'sweden' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> Sweden</a>
-               <a href="{% url 'hiking:hike-set-filter' 'turkey' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> Turkey</a>
-               <a href="{% url 'hiking:hike-set-filter' 'uk' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> UK</a>
-               <a href="{% url 'hiking:hike-set-filter' 'usa' %}" class="btn btn-primary btn-sm" role="button"><i class="fas fa-layer-group"></i> USA</a>
-           </td>
+                <form action="country/Italy" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> Italy</button>
+                </form>
+                <form action="country/New%20Zealand" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> New Zealand</button>
+                </form>
+                <form action="country/Norway" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> Norway</button>
+                </form>
+                <form action="country/Peru" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> Peru</button>
+                </form>
+                <form action="country/Spain" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> Spain</button>
+                </form>
+                <form action="country/Sweden" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> Sweden</button>
+                </form>
+                <form action="country/Turkey" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> Turkey</button>
+                </form>
+                <form action="country/UK" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> UK</button>
+                </form>
+                 <form action="country/USA" method="post">
+                    <button class="btn btn-primary btn-sm" type="submit" name="filter"><i class="fas fa-layer-group"></i> USA</button>
+                </form>
+
+          </td>
          </tr>
 
        </table>

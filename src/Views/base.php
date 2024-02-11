@@ -12,6 +12,15 @@
     <link rel="icon" href="favicon.png">
 
     <title>Hiking Nico</title>
+
+        <style>
+        /* CSS to style forms as inline-block */
+        form {
+            display: inline-block;
+            margin-right: 1px; /* Adjust as needed */
+        }
+    </style>
+
 </head>
 
 <body>

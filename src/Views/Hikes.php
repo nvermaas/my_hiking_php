@@ -1,6 +1,6 @@
-<?php include 'base.php'; ?>
+<?php include_once 'base.php'; ?>
 
-    <?php include 'filter_buttons.php'; ?>
+    <?php include_once 'filter_buttons.php'; ?>
 
     <div class="hiking-container container-fluid">
         <div class="row">
@@ -20,7 +20,7 @@
                             <h4 class="card-title">' . $row['title'] . ' ' . $row['year'] . ' - <small>' . $row['place'] . '</small></h4>
 
                             <td>
-                                <form action="hike/' . $row['id'] . '" method="post">
+                                <form action="/my_hiking/hike/' . $row['id'] . '" method="post">
                                   <input type="hidden" name="id" value="' . $row['id'] . '">
                                   <button class="btn btn-primary btn-sm" type="submit" name="details"><i class="fas fa-list"></i> Hike Details</button>
                                 </form>
