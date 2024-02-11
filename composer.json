@@ -13,7 +13,5 @@
             "email": "nvermaas@xs4all.nl"
         }
     ],
-  "require": {
-    "maximebf/debugbar": "1.*"
-  }
+    "require": {}
 }
